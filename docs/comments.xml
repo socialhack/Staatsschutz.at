@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-2"?>
+<comments>
+	<comment>
+		<firstname>Vorname01</firstname>
+		<lastname>Nachname01</lastname>
+		<state>Bundesland01</state>
+		<message>Dies ist ein Platzhalter für die erste Nachricht. Um eine möglichst gute Vorschau darzustellen, wird ein Text von etwa dieser Länge benötigt.</message>
+	</comment>
+	<comment>
+		<firstname>Vorname02</firstname>
+		<lastname>Nachname02</lastname>
+		<state>Bundesland02</state>
+		<message>Dies ist ein Platzhalter für die zweite Nachricht. Um eine möglichst gute Vorschau darzustellen, wird ein Text von etwa dieser Länge benötigt.</message>
+	</comment>
+	<comment>
+		<firstname>Vorname03</firstname>
+		<lastname>Nachname03</lastname>
+		<state>Bundesland03</state>
+		<message>Dies ist ein Platzhalter für die dritte Nachricht. Um eine möglichst gute Vorschau darzustellen, wird ein Text von etwa dieser Länge benötigt.</message>
+	</comment>
+</comments>

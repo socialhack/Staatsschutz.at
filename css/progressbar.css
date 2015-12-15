@@ -1,0 +1,32 @@
+.progress_bar {
+    position: relative;
+    overflow: hidden;
+    margin: 2em auto 0;
+    border: solid 1px #003b4c;
+    border-radius: 0.3em;
+}
+
+.progress_volume {
+    background: #8ebf2a;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 100%;
+    width: 0.01%;
+    position: absolute;
+    transition: width 4s ease;
+}
+
+#progress_description {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    padding: .4em;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px #fff;
+}

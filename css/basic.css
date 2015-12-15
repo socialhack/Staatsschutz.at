@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+body {
+    color: #000;
+    font-family: fira_sansregular, sans-serif;
+    line-height: 1.4;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.nocss {
+    display: none;
+}
+
+/* abbr[title], span[title] { cursor:help; } */
+
+:lang(de) {
+    quotes: "\201E" "\201C" "\201A" "\2018";
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+a:hover abbr {
+    border: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 0 0 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+p {
+    margin: 0.5em 0 1em;
+}
+
+li {
+    margin: 0.5em 0;
+}
