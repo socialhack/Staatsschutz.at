@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html id="top" lang="de-AT">
-
+<!doctype html>
+<!--[if lt IE 7 ]> <html id="top" lang="de-AT" class="no-js ie ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7 ]>    <html id="top" lang="de-AT" class="no-js ie ie7 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8 ]>    <html id="top" lang="de-AT" class="no-js ie ie8 lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html id="top" lang="de-AT" class="no-js ie ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html id="top" lang="de-AT" class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=10.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Petition gegen das geplante Staatsschutzgesetz</title>
+    <meta name="format-detection" content="telephone=no" />
     <meta name="author" content="Arbeitskreis Vorratsdastenspeicherung" />
     <meta name="description" content="Kein neuer Inlandsgeheimdienst in Österreich!" />
     <meta name="keywords" content="Petition,PStSG,Staatsschutzgesetz,Überwachungsstaat" />
     <meta name="robots" content="index,follow" />
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://staatsschutz.at/img/sharables/staatsschutz-1200.png" />
     <meta property="og:title" content="Petition gegen das geplante Staatsschutzgesetz" />
     <meta property="og:url" content="https://www.staatsschutz.at" />
     <meta property="og:description" content="Kein neuer Inlandsgeheimdienst in Österreich!" />
-    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/basic.css" />
-    <link rel="stylesheet" type="text/css" href="./css/various.css" />
-    <link rel="stylesheet" type="text/css" href="./css/slider.css" />
-    <link rel="stylesheet" type="text/css" href="./css/progressbar.css" />
+    <!-- Bootstrap core CSS 
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet" />    
+    -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="icon" href="./favicon.ico" />
     <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="./js/count.js"></script>
@@ -31,47 +38,113 @@
 
 <body id="home">
     
-    <!--START body header-->
+    <!-- START body header -->
     <header>
-        <p id="akvorrat" class="max768">
-            <a href="https://www.akvorrat.at/"><img src="./img/akvorrat.png" alt="AKVorrat Logo" /></a>
-       </p>
-        <h1>Petition gegen das geplante Staatsschutzgesetz
-		<br />
-		<small class="subheadline">Kein neuer Inlandsgeheimdienst in Österreich!</small>
-		<br />
-		<img src="./img/notext.png" alt="Staatsschutz -alt Logo" />
-        </h1>
+        <img src="./img/notext.png" id="logo" alt="Petition gegen das geplante Staatsschutzgesetz - Logo" />
+        <h1>Petition<br /> gegen das geplante<br /> <em>Staatsschutzgesetz</em></h1>
+    		<strong class="subheadline">Kein neuer Inlandsgeheimdienst in Österreich!</strong>
+        <a href="https://www.akvorrat.at/" id="akvorrat"><img src="./img/akvorrat.png" alt="AKVorrat - Logo" title="eine Aktion des AKVorrat" /></a>
     </header>
-    <!--END body header-->
+    <!-- END body header -->
     
-    <!--START body slider-->
-    <div id="slider" class="slider">
-        <div id="slideleft" class="slide noSelect slideUnselectable" onclick="slideBackwards()">&lt;</div>
-        <div class="slideColumn">
-            <div id="slideContent" class="slideContent noSelect">
-                <strong id="slideauthor">Arbeitskreis Vorratsdaten Österreich</strong>
-                <div>
-                    <div id="quoteFadeout"></div>
-                    <blockquote id="slidetext" style="max-height: 2.3em;">Das geplante Staatschutzgesetz untergr&#228;bt unsere Grundrechte und etabliert eine unkontrollierbare &#220;berwachungsbeh&#246;rde.</blockquote>
-                </div>
-            </div>
+    <!-- START primary navigation -->
+    <nav id="primary">
+      <ul class="inner menu clearfix">
+        <li class=""><a href="#fakten">Fakten</a></li>
+        <li class=""><a href="#kritik">Kritik</a></li>
+        <li class=""><a href="#forderungen">Forderungen</a></li>
+        <li class=""><a href="#unterschreiben">Unterschreiben</a></li>
+        <li class=""><a href="#jetzt-spenden">Jetzt spenden!</a></li>
+      </ul>
+    </nav>
+    <!-- END primary navigation -->
+    
+    <!-- START meta navigation -->
+    <nav id="meta">
+      <ul class="inner menu clearfix">
+        <li class=""><a href="#unterschreiben">Unterschreiben</a></li>
+        <li class=""><a href="#jetzt-spenden">Jetzt spenden!</a></li>
+        <li class=""><a href="#weitersagen">Downloads</a></li>
+        <li class=""><a href="#weitersagen">Weitersagen</a></li>
+        <li class=""><a href="#informiert-bleiben">Informiert bleiben</a></li>
+      </ul>
+    </nav>
+    <!-- END meta navigation -->
+    
+    <!-- START teaser stage -->
+    <section class="teaser-stage">
+      <!-- START body slider -->
+      <div id="slider" class="slider">
+          <div id="slideleft" class="slide noSelect slideUnselectable" onclick="slideBackwards()">&lt;</div>
+          <div class="slideColumn">
+              <div id="slideContent" class="slideContent noSelect">
+                  <strong id="slideauthor">Arbeitskreis Vorratsdaten Österreich</strong>
+                  <div>
+                      <div id="quoteFadeout"></div>
+                      <blockquote id="slidetext" style="max-height: 2.3em;">Das geplante Staatschutzgesetz untergr&#228;bt unsere Grundrechte und etabliert eine unkontrollierbare &#220;berwachungsbeh&#246;rde.</blockquote>
+                  </div>
+              </div>
+          </div>
+          <div id="slideright" class="slide noSelect slideUnselectable" onclick="slideForwards()">&gt;</div>
+      </div>
+      <!-- END body slider -->    
+        
+      <!-- START progress bar -->
+      <div id="progress">
+        <div class="inner progress-bar">
+          <div class="progress-volume"></div>
+          <p class="progress-description">Wir benötigen deine Unterschrift!</p>
         </div>
-        <div id="slideright" class="slide noSelect slideUnselectable" onclick="slideForwards()">&gt;</div>
-    </div>
-    <!--END body slider-->
+      </div>
+      <!-- END progress bar -->
+      
+      <!-- START countdown -->
+      <p class="countdown">Das Gesetz muss zurück an den Start!</p>
+      <!-- END countdown -->
+    </section>
+    <!-- END teaser stage -->
     
     <!--START body main-->
-    <div class="container">
-        
-        <!--START progress bar-->
-        <div class="progress_bar shadow">
-            <div id="progress" class="progress_volume"></div>
-            <p id="progress_description">
-                <noscript>Dieses Element braucht <a href="http://enable-javascript.com/de/" title="Wie Sie JavaScript in Ihrem Browser aktivieren">JavaScript</a>.</noscript>
-           </p>
+    <main>
+      <section class="articles">
+        <div class="inner">
+          <article id="fakten">
+            <div class="inner">
+              <h2></h2>
+              <div class="content clearfix">
+              </div>
+            </div>
+          </article>
+          <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
+          <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
+          <article id="kritik">
+            <div class="inner">
+              <h2></h2>
+              <div class="content clearfix">
+              </div>
+            </div>
+          </article>
+          <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
+          <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
+          <article id="forderungen">
+            <div class="inner">
+              <h2></h2>
+              <div class="content clearfix">
+              </div>
+            </div>
+          </article>
         </div>
-        <!--END progress bar-->
+      </section>
+      <aside class="sidebar">
+        <div class="inner">
+          <div id="subscribe" class="widget">
+            <h3>Unterschreiben</h3>
+            <div class=="content">
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
         
         <div class="row">
             

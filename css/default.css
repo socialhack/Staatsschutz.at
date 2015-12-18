@@ -1,0 +1,1026 @@
+/**
+ * font-family declarations
+ * =========================
+ * must stay on top
+ * look at ../fonts/open-sans.css
+ * for dokumentation
+ */
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/open-sans/open-sans/OpenSans-Light-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('../fonts/open-sans/OpenSans-LightItalic-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../fonts/open-sans/OpenSans-Italic-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../fonts/open-sans/OpenSans-Semibold-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+       url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+       url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+       url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@media screen and ( min-width: 768px ) {
+  .main aside .block,
+  .main aside .widget{
+
+  }
+  .content .gallery:before,
+  .content .gallery:after {
+      content: " ";
+      display: table;
+  }
+  .content .gallery:after {
+      clear: both;
+  }
+  .content .gallery:before,
+  .content .gallery:after {
+      content: " ";
+      display: table;
+  }
+  .content .gallery:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 987px) {
+  .main aside .block,
+  .main aside .widget{
+    width:47%;
+    float:left;
+    margin:0 1.5% 2em 1.5%;
+  }
+  /**
+   * form-item clearfix. Drupal sucks
+   * ================================
+   */
+  .main aside > .inner:before,
+  .main aside > .inner:after {
+      content: " ";
+      display: table;
+  }
+  .main aside > .inner:after {
+      clear: both;
+  }
+  .main aside > .inner:before,
+  .main aside > .inner:after {
+      content: " ";
+      display: table;
+  }
+  .main aside > .inner:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      visibility: hidden;
+  }
+}
+@media screen and (min-width: 987px) {
+
+  .main aside{
+    width:30%;
+    float:left;
+  }
+  .main aside.content-after{
+    float:right;
+  }
+  .with-content-regions .main aside{
+    width:20%;
+    float:left;
+  }
+  .with-content-regions .main article + aside,
+  .with-content-regions .main .articles + aside{
+    float:right;
+  }
+  .main .articles,
+  .main > .inner > article{
+    float:left;
+    width:66%;
+  }
+  .with-content-regions .main .articles,
+  .with-content-regions .main > .inner > article{
+    width:60%;
+  }
+  .no-content-regions .main .articles,
+  .no-content-regions .main > .inner > article{
+    width:100%;
+    float:none;
+  }
+  .articles article,
+  .region-content .node{
+    float:none;
+    width:auto;
+    padding:2em 0;
+  }
+}
+
+/* Reset initializr style settings
+ * -------------------------------
+ * can be safely deleted if
+ * initializr main.css is removed
+ */
+/* Wrapper */
+.wrapper{
+  width:auto;
+  margin:0;
+}
+body > .container > .wrapper{
+  /* fixed layout, set your value * 10
+  width:98.7em;
+  */
+  /* fluid layout, set your value as %
+  */
+  width:90%;
+  margin:0 auto;
+}
+/* Title */
+.title{
+  color:inherit;
+  float:none;
+}
+.with-content-regions .main .articles .inner,
+.with-content-regions .main > .inner > article .inner{
+  padding:0 5%;
+}
+/* Sidebars */
+.main aside{
+  padding:0;
+  margin:0;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  background:none;
+  border:none;
+}
+.main aside .block > .block-inner,
+.main aside .widget > .inner{
+  padding:2em 10%;
+}
+
+/* Nav */
+nav{
+  float:none;
+  width:auto;
+}
+nav ul li{
+  display:block;
+  display:list-item;
+}
+nav a{
+  float:none;
+  padding:0;
+  margin:0;
+  width:auto;
+  display:block;
+  background:none;
+  text-align:left;
+}
+nav a:link,
+nav a:visited{
+  color:inherit;
+}
+
+/* About Default Styles
+ * ---------------------
+ * default.css is used to establish general rules, browser reset, or admin user interface styles.
+ * Browser Reset
+ * -------------
+ * For a more complete reset, go to http://developer.yahoo.com/yui/reset/
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Font size to 10px at body */
+html{
+  font-size:1.25em;
+}
+body {
+  font-size: 0.5em;
+}
+body > .debug > .inner{
+  /* fixed layout, set your value * 10
+  width:94.7em;
+  */
+  /* fluid layout, set your value as %
+  */
+  width:86%;
+  padding:0.1em 2% 0.3em 2%;
+  margin-top:1em;
+  margin-bottom:1em;
+  -webkit-box-shadow:inset 0 0 40px 0 rgba(255, 0, 0, 0.1), 0 0 7px -2px rgba(0, 0, 0, 0.3);
+  box-shadow:inset 0 0 40px 0 rgba(0, 0, 0, 0.1), 0 0 7px -2px rgba(0, 0, 0, 0.3);
+  background:#E34D26;
+  color:#FFFFFF;
+}
+
+/* List styles. */
+ul          { list-style-type: disc;   }
+ul ul       { list-style-type: circle; }
+ul ul ul    { list-style-type: square; }
+ul ul ul ul { list-style-type: circle; }
+
+ol       { list-style-type: decimal;     }
+ol ol    { list-style-type: lower-alpha; }
+ol ol ol { list-style-type: decimal;     }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin:0 0 0.3em 0;           /* 2 */
+}
+p,
+table,
+ul,
+ol,
+dl,
+dt,
+dd,
+.columns,
+img {
+  margin:0 0 1em 0;             /* 2 */
+}
+ul,
+ol{
+  padding-left:1.5em;           /* 3 */
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul{
+  padding-top:0.5em;            /* 4 */
+}
+dt {
+  clear:left;
+  float:left;
+  width:33%;
+  padding-right:3%;
+  font-weight:bold;
+}
+dd {
+  margin-left:36%;
+}
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+/* table styles. */
+table{
+  width:100%;
+}
+/* Abbreviation. */
+abbr {
+  cursor: help;
+  white-space: nowrap;
+}
+/* Form styles */
+fieldset{
+  margin:0 0 0.5em 0;
+}
+button, input, select, textarea{
+background:#FFFFFF;
+border:none;
+padding:0.5em 1em;
+border-radius:5px;
+margin:0 2% 0.5em 0;
+color:#666666;
+max-width:98%;
+}
+.form-textarea-wrapper textarea{
+color:#666666;
+}
+input,
+select,
+textarea{
+transition:all ease 500ms;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea{
+box-shadow:inset 0 0 25px -5px rgba(0, 0, 0, 0.2);
+}
+textarea{
+padding:1em;
+}
+input[type="text"],
+input[type="password"]{
+text-indent:1em;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus{
+box-shadow:inset 0 0 15px -5px rgba(0, 0, 0, 0.3);
+color:#000000;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+text-align:center;
+padding-left:1em;
+padding-right:1em;
+text-indent:0;
+border:1px solid #D5D5D5;
+}
+button:hover,
+button:focus,
+input[type="submit"]:focus,
+input[type="submit"]:hover{
+border-color:#CCCCCC;
+color:#000000;
+}
+#block-search-form div{
+display:block;
+}
+
+.element-invisible{
+  margin:0;
+  padding:0;
+}
+tbody{
+  border-color:transparent;
+}
+tr.even,
+tr.odd{
+  background:none;
+}
+.links{
+  padding:0;
+}
+.links li{
+  list-style:none;
+  display:inline;
+}
+.links li + li:before{
+  content: " | "
+}
+.pager{
+  padding:0;
+  text-align:center;
+}
+.pager li{
+  list-style:none;
+  display:inline;
+}
+.pager li a{
+  display:inline-block;
+  padding:0 0.5em;
+}
+.pager li.pager-current{
+  padding:0 0.5em;
+}
+
+.pager li.pager-first a,
+.pager li.pager-previous a,
+.pager li.pager-next a,
+.pager li.pager-last a{
+  text-indent: -999em;
+}
+.pager li.pager-first a:before,
+.pager li.pager-previous a:before,
+.pager li.pager-next a:before,
+.pager li.pager-last a:before{
+  display:block;
+  float:left;
+  text-indent: 0;
+  font-size:1.8em;
+  position:relative;
+  text-align: center;
+  top:-0.4em;
+}
+.pager li.pager-first    a:before { content:"\00AB"; }
+.pager li.pager-previous a:before { content:"\2039"; }
+.pager li.pager-next     a:before { content:"\203A"; }
+.pager li.pager-last     a:before { content:"\00BB"; }
+/**
+ * Helper classes
+ * ==============
+ * They provide simple, selffulfilling properties
+ * which are readable by their names.
+ * ----------------------------------------------
+ * hide-block     { display:block;
+ *                  position:absolute;
+ *                  left:-9999em;       }
+ * hide-text      { text-indent:-999em; }
+ * align-left     { text-align:left;    }
+ * align-center   { text-align:center;  }
+ * align-right    { text-align:right;   }
+ * align-justify  { text-align:justify; }
+ * nowrap         { white-space:nowrap; }
+ * float-left     { float:left;         }
+ * float-right    { float:right;        }
+ * clear          { clear:both;         }
+ * clear-left     { clear:left;         }
+ * clear-right    { clear:right;        }
+ * clearfix       - see below
+ * ----------------------------------------------
+ * Legacy names which have the same funcionality:
+ * left, floatleft
+ * right, floatright
+ * clearFloat
+ * invisible
+ * hideBlock
+ * hideText
+ * hideAccessible
+ */
+/* Hidings / Image replacement */
+.invisible {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 8 */
+
+  filter: alpha(opacity=0);
+  /* IE 5-7 */
+
+  -moz-opacity: 0;
+  /* Netscape */
+
+  -khtml-opacity: 0;
+  /* Safari 1.x */
+
+  opacity: 0;
+  /* Good browsers */
+}
+.hide-block {
+  display: block;
+  position: absolute;
+  left: -999em;
+}
+.hide-text {
+  text-indent: -999em;
+}
+/* Text alignment */
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.align-justify {
+  text-align: justify;
+}
+/* Text wrapping */
+.nowrap {
+  white-space: nowrap;
+}
+/* Floats */
+.float-left,
+.alignleft {
+  float: left;
+}
+.float-right,
+.alignright {
+  float: right;
+}
+/* Clear floats */
+.clear {
+  clear: both;
+}
+.clear-left {
+  clear: left;
+}
+.clear-right {
+  clear: right;
+}
+/**
+ * Micro Clearfix for modern browsers by Nicolas Gallagher
+ * =======================================================
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * -------------------------------------------------------
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * ===============
+ * Include this rule to trigger hasLayout and contain floats.
+ * ----------------------------------------------------------
+ * THERE BE DRAGONS!
+ * IF USING CLEARFIX FOR IE7 YOU HAVE TO AVOID MARGIN ON THE
+ * INNER ELEMENT AND PUT PADDING ON THE OUTER.
+ */
+.lt-ie8 .clearfix {
+  zoom: 1;
+}
+/**
+ * form-item clearfix. Drupal sucks
+ * ================================
+ */
+#block-system-main .form-item:before,
+#block-system-main .form-item:after {
+    content: " ";
+    display: table;
+}
+#block-system-main .form-item:after {
+    clear: both;
+}
+#block-system-main .form-item:before,
+#block-system-main .form-item:after {
+    content: " ";
+    display: table;
+}
+#block-system-main .form-item:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* "Skip to Main Content" link
+ * ---------------------------
+ * This link useful for both visually impaired people and those with mobility impairments
+ * who cannot use a mouse. http://www.webaim.org/techniques/css/invisiblecontent/ */
+#skip{
+  position:absolute;
+  height:0;
+  top:20px;
+  left:20px;
+  z-index:100;
+}
+#skip li{
+  list-style:none;
+}
+#skip a{
+  white-space:nowrap;
+}
+#skip a:link, #skip a:hover, #skip a:visited {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  display:block;
+}
+#skip a:active, #skip a:focus {
+  left:auto;
+  padding:3px 1em;
+  background:#FFFFFF;
+  color:#111111;
+  outline:0;
+  border:1px solid #111111;
+  -webkit-box-shadow:  0px 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow:  0px 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+/* DRUPAL related stuff
+ * --------------------
+ */
+
+/* bug fix with views 2 edit links. */
+div.view div.views-admin-links {
+  width: auto;
+}
+#overlay-container,
+.overlay-modal-background,
+.overlay-element {
+  padding-top:5%;
+  height:95%;
+}
+
+/* Rollover edit links for blocks. */
+div.block {
+  position: relative;
+}
+div.block .edit {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: -5px;
+  z-index: 40;
+  padding: 3px 8px 0;
+  font-size: 10px;
+  line-height: 16px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  /*let's get fancy! */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 1px 3px #888888;
+  -webkit-box-shadow: -1px 1px 2px #666666;
+}
+div.block .edit a {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+div.block:hover .edit {
+  display: block;
+}
+
+/* Wireframe styles. */
+.with-wireframes #header,
+.with-wireframes #content-top,
+.with-wireframes #content-top > *,
+.with-wireframes #content-header,
+.with-wireframes #content-header > *,
+.with-wireframes #content-area,
+.with-wireframes #content-area > *,
+.with-wireframes #content-bottom,
+.with-wireframes #content-bottom > *,
+.with-wireframes #primary,
+.with-wireframes #secondary,
+.with-wireframes #sidebar-left-inner,
+.with-wireframes #sidebar-right-inner,
+.with-wireframes .block {
+  padding: 2px;
+  border: 1px solid #bbbbbb;
+}
+.with-wireframes .node {
+  border-bottom: 1px solid #bbbbbb;
+  margin-bottom: 10px;
+}
+.with-wireframes .block {
+  margin-bottom: 3px;
+}
+.with-wireframes #content-top,
+.with-wireframes #content-header,
+.with-wireframes #content-area,
+.with-wireframes #content-bottom {
+  margin: 0 3px 3px;
+}
+.with-wireframes #footer {
+  margin-top: 3px;
+  padding: 2px;
+  border: 1px solid #cccccc;
+}
+.with-wireframes.with-navigation #content,
+.with-wireframes.with-navigation .sidebar {
+  margin-top: 50px;
+}
+.with-wireframes #navigation {
+  height: 50px;
+}
+/* UI improvments. */
+div.admin{
+}
+.page-admin .block-system form{
+  overflow:hidden;
+  overflow-x:auto;
+  max-width:100%;
+}
+div.admin-panel{
+background:#F8F8F8;
+border:1px solid #CCCCCC;
+}
+div.admin-panel .body{
+padding:0;
+clear:both;
+}
+div.admin-panel{
+margin:0 0 1em 0;
+padding:0.5em 0.5em 00 0.5em;
+}
+div.admin-panel h3{
+  font-size:1em;
+  border-bottom:1px solid #CCCCCC;
+  padding:0.5em 0;
+  margin:0 0.5em 1em 0.5em;
+}
+.section-admin table,
+.section-edit table{
+border:1px solid #EFEFEF;
+border-width:1px 0 0 1px;
+}
+.section-admin tr,
+.section-edit tr{
+border-bottom:1px solid #EFEFEF;
+}
+.section-admin tr.info,
+.section-edit tr.info{
+background-color:#BBDDFF;
+color:#040F37;
+}
+.section-admin tr.ok,
+.section-edit tr.ok{
+background-color:#E5FFE2;
+color:#255B1E;
+}
+.section-admin tr.error,
+.section-edit tr.error{
+background-color:#FEF5F1;
+color:#8C2E0B;
+}
+.section-admin #block-system-main td:last-child,
+.section-edit #block-system-main td:last-child{
+border-right:1px solid #EFEFEF;
+}
+.section-admin #block-system-main table,
+.section-edit #block-system-main table{
+border:1px solid #EFEFEF;
+border-width:1px 0 0 1px;
+}
+.section-admin #block-system-main td,
+.section-edit #block-system-main td{
+border:1px solid #EFEFEF;
+border-width:0 1px 1px 0;
+}
+.section-admin #block-system-main th,
+.section-edit #block-system-main th,
+.section-admin #block-system-main tr.region-title td,
+.section-edit #block-system-main tr.region-title td{
+border:1px solid #FFFFFF;
+border-width:0 1px 1px 0;
+background:#DFDFDF;
+text-align:left;
+}
+.section-admin #block-system-main .module,
+.section-edit #block-system-main .module,
+.section-admin #block-system-main label,
+.section-edit #block-system-main label,
+.section-admin #block-system-main tr.region-title td,
+.section-edit #block-system-main tr.region-title td{
+  font-weight:bold;
+}
+
+.section-admin #block-system-main fieldset,
+.section-edit #block-system-main fieldset{
+  position:relative;
+  padding:1.5em 0.5em 0.5em 0.5em;
+  margin:1.5em 0 1em 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #EFEFEF;
+}
+.section-admin #block-system-main legend,
+.section-edit #block-system-main legend{
+  background:#EFEFEF;
+  color:#252525;
+  position:absolute;
+  top:-0.9em;
+  left:0.5em;
+  padding:0.2em 0.5em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 1px 2px #666666;
+  -moz-box-shadow: 0 1px 3px #888888;
+  box-shadow: 0 1px 3px #888888;
+}
+.section-admin #block-system-main .odd,
+.section-edit #block-system-main .odd{
+  background:#EFEFEF;
+}
+.section-admin #block-system-main .odd *,
+.section-edit #block-system-main .odd *{
+  border-color:#FFFFFF;
+}
+.section-admin #block-system-main .form-item,
+.section-edit #block-system-main .form-item{
+  height:auto;
+  padding:0.5em 0 0 0.5em;
+}
+.section-admin #block-system-main td > .form-item,
+.section-edit #block-system-main td > .form-item{
+  padding-left:0;
+}
+.section-admin #block-system-main table .form-item,
+.section-edit #block-system-main table .form-item{
+  padding-top:0;
+}
+.section-admin #block-system-main .checkbox .form-item,
+.section-edit #block-system-main .checkbox .form-item{
+  text-align:center;
+  min-width:4em;
+  padding-left:0;
+}
+.section-admin #block-system-main .checkbox .form-item input,
+.section-edit #block-system-main .checkbox .form-item input{
+  margin:0;
+}
+th a,
+.version-status{
+  display: block;
+  position: relative;
+}
+th.active a,
+.version-status .icon{
+  padding-right:20px;
+}
+th.active img,
+.version-status .icon img{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.version-status .icon img{
+  top:0;
+}
+.update table.version tr,
+.update table.version td{
+  line-height:1.4;
+  padding:0.3em 0.5em;
+}
+.version-links .links{
+  margin:0;
+  white-space:nowrap;
+}
+.admin-list:before,
+.admin-list:after{
+  content: " ";
+  display:table;
+}
+.admin-list:after{
+  clear:both;
+}
+.lt-ie9 .admin-list{
+  zoom:1;
+}
+.admin-list li,
+.admin-list dt,
+.admin-list dd{
+border-top:1px solid #656565;
+padding:1em 1em 0 1em;
+}
+.admin-list dl{
+  font-size:0.9em;
+}
+.admin-list dt,
+.admin-list dd{
+  border:none;
+  margin:0;
+  padding:0 0.5em;
+}
+.admin-list dt{
+  float:none;
+  width:auto;
+}
+.admin-list dd{
+  margin-bottom:1em;
+}
+.admin-list dd + dt{
+  border-top:1px solid #CCCCCC;
+  padding-top:1em;
+}
+.exposed-filters .filters{
+width:27em;
+}
+#palette .lock{
+  left:0;
+  top:0;
+}
+#color_scheme_form #palette .form-item,
+#color_scheme_form .form-item{
+  width:27em;
+}
+.section-admin #block-system-main label,
+.section-edit #block-system-main label{
+  padding:0.5em 0;
+  margin:0 0.5em 0.5em 0;
+  display:inline-block;
+  line-height:normal;
+}
+.section-admin #block-system-main .form-type-select select,
+.section-edit #block-system-main .form-type-select  select{
+  float:right;
+  clear:right;
+}
+#edit-title {
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+}
+#system-themes-form img {
+  width: 100px;
+}
+.form-item .description {
+  font-style: italic;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+#edit-delete {
+  color: #cc0000;
+}
+.module-link{
+  display:block;
+  height:1.1428em;
+  width:1.1428em;
+  text-indent:-9999em;
+}
+
+/* Console, style from slate theme. */
+div.messages {
+  padding: 1em;
+  margin: 1em 0;
+  color: #003366;
+  background: #bbddff;
+  border: 1px solid #aaccee;
+  font-size:1.4em;
+}
+div.warning {
+  color: #884400;
+  background: #ffee66;
+  border-color: #eedd55;
+}
+div.error {
+  color: white;
+  background: #ee6633;
+  border-color: #dd5522;
+}
+div.status {
+  color: #336600;
+  background: #ccff88;
+  border-color: #bbee77;
+}
