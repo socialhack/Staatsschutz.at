@@ -79,11 +79,6 @@ h1, h2, h3, h4, h5, h6, th, bold, strong, a:link, a:visited, dt{
     float: right;
 }
 
-.subheadline {
-    font-size: .75em;
-    color: rgba(255, 255, 255, .5)
-}
-
 @media (max-width: 900px) {
     .container {
         max-width: 100%;
@@ -150,18 +145,75 @@ noscript a {
     color: #262;
 }
 
+
+/**
+ * Header
+ * ======
+ */
 header {
-    position: relative;
-    overflow: hidden;
-    padding: 1em 1em 0;
-    background: #003b4c;
-    color: #fff;
-    text-align: center;
+  position: relative;
+  background: #003B4C;
+  color: #FFFFFF;
+  text-align: center;
+  border-bottom:3px solid #EB4B34;
+}
+header .wrapper{
+  margin-left:auto;
+  margin-right:auto;
+}
+#logo{
+  max-width:31.7em;
+  margin-bottom:1em;
 }
 
-header h1 {
-    font-size: 2em;
+#site-header h1{
+  font-size:4.4em;
+  margin-top:0;
+  margin-bottom:0.2em;
 }
+#site-header h2{
+  font-size:2.8em;
+  line-height:1.8;
+  max-width:40%;
+  margin-bottom:0.5em;
+}
+#site-header a{
+  display:block;
+  color:#FFFFFF;
+  text-decoration:none;
+  border-bottom:3px solid #EB4B34;
+}
+#site-header a:link,
+#site-header a:visited{
+  background:#EB4B34;
+}
+#site-header a:hover,
+#site-header a:focus{
+  background:#507884;
+}
+#site-header .subheadline{
+  background:#333333;
+  font-size:2em;
+  line-height:2;
+  margin:0;
+}
+#site-header #akvorrat {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+  padding:1.5em;
+  max-width:15%;
+  border-bottom:3px solid #EB4B34;
+}
+#site-header #akvorrat:link,
+#site-header #akvorrat:visited{
+  background:#333333;
+}
+#site-header #akvorrat:hover,
+#site-header #akvorrat:focus{
+  background:#507884;
+}
+
 
 /*#akvorrat:after {
 	content:'AKVorrat';
@@ -172,20 +224,6 @@ header h1 {
 	font-size:5em;
 	font-weight:bold;
 }*/
-
-header h1 {
-    font-size: 3.2em;
-    margin: 0 0 0.35em;
-}
-
-header cite {
-    position: relative;
-    top: -2.1em;
-    padding: 0.3em 0.5em;
-    color: #000;
-    background: #8ebf2a;
-    border-radius: 0.3em;
-}
 
 .actions {
     margin: 0;
@@ -376,12 +414,6 @@ input.inputText {
     text-align: center;
     padding: 2em 0 0;
     margin-bottom: 2em;
-}
-
-#akvorrat {
-    position: absolute;
-    top: 13em;
-    right: 1.3em;
 }
 
 /**
