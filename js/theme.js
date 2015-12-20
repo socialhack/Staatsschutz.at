@@ -242,7 +242,9 @@
           toggle: 'Toggle Menu'
         }
       },
-      info: {},
+      info: {
+        timeOut: null
+      },
       set_menuHeight: function(){
         this.info.menuHeight = this.$menu.outerHeight() + this.options.borderTreshold;
       },
@@ -265,10 +267,11 @@
               $body.removeClass(info.name + '-' + options.classNames.active);
 
             } else {
-              $toggler.addClass(options.classNames.active);
               
+              $toggler.addClass(options.classNames.active);              
               $target.css({top:'-3px'});
-              setTimeout(function(){
+              
+              info.timeOut = setTimeout(function(){
                 $target.addClass(options.classNames.active).find('a').eq(0).trigger('focus');
                 $body.addClass(info.name + '-' + options.classNames.active);
               }, options.duration);
