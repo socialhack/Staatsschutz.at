@@ -280,6 +280,11 @@ header > .inner{
 #primary.app-menu .toggle:before{ content: "\f0c9"; }
 #primary.app-menu .toggle.active{ background:#507884; }
 
+#primary .menu{
+  background:#333333;
+  border:3px solid #EB4B34;
+  border-width:0 0 3px 0;
+}
 #primary.app-menu .menu{
   position:absolute;
   right:0;
@@ -312,7 +317,7 @@ header > .inner{
 #primary .menu a{
   font-size:1.4em;
   padding:0 2em;
-  line-height:3em;
+  line-height:2.857142em;
   color:#FFFFFF;
   text-decoration:none;
 }
@@ -757,6 +762,39 @@ input.inputText {
     display: inline;
     position: static;
     left:auto;
+  }
+}
+@media all and (min-width: 1024px) {
+  #site-header .subheadline{
+    width:47%;
+    padding:0 3% 0 0;
+    text-align: right;
+  }
+  #primary{
+    position:relative;
+    z-index:25;
+  }
+  #primary h3{
+    position:absolute;
+    left:-9999em;
+  }
+  #primary .menu{
+    position:absolute;
+    width:47%;
+    right:0;
+    padding-left:3%;
+    top:-4.3em;
+    border-left:1px solid #EB4B34;
+  }
+  #primary li{
+    float:left;
+    position:relative;
+  }
+  #primary .menu a{
+    padding:0 1em;
+  }
+  #primary li.first a{
+    margin-left:-1em;
   }
 }
 

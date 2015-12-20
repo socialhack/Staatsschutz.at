@@ -269,7 +269,7 @@
             } else {
               
               $toggler.addClass(options.classNames.active);              
-              $target.css({top:'-3px'});
+              $target.css({top:'-' + options.borderTreshold +'px'});
               
               info.timeOut = setTimeout(function(){
                 $target.addClass(options.classNames.active).find('a').eq(0).trigger('focus');
@@ -287,7 +287,7 @@
       disable: function () {
         var options = this.options;
 
-        // this.$toggler.off('click').remove();
+        this.$toggler.off('click');
         this.$menu.find('a').off('click');
         //this.$menu.find('.sub-menu-parent-link').remove();
         this.$menu.removeAttr('style').removeClass('active');
@@ -304,6 +304,8 @@
           }
         } else {
           if ( !this.info.isActive ) {
+            this.set_menuHeight();
+            $.log(this.info.menuHeight);
             this.enable();
           }
         }
