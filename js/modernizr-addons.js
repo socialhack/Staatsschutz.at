@@ -1,6 +1,6 @@
-(function(M){
-  M.addTest('mediaqueries', Modernizr.mq("only all"));
-  M.addTest('placeholder', Modernizr.input.placeholder);
+;(function(M){
+  M.addTest('mediaqueries', M.mq("only all"));
+  M.addTest('placeholder', M.input.placeholder);
   
   /**
    * Detect if a browser is respond.js supported

@@ -225,103 +225,76 @@
      */
     menu: {
       options: {
-        disableOn: 600,
+        disableOn: 1023,
+        borderTreshold: 3,
+        duration: 350,
         selectors: {
-          nav: '#menuBar',
-          menu: '#menu-main',
+          nav: '#primary',
+          menu: '#menu-primary',
           toggler: '#menu-toggle',
         },
         classNames: {
-          togglerClass: 'toggle',
-          activeClass: 'active'
+          enabled: 'app-menu',
+          toggler: 'toggle',
+          active: 'active'
         },
         texts: {
-          toggleText: 'Toggle Menu'
+          toggle: 'Toggle Menu'
         }
       },
       info: {},
+      set_menuHeight: function(){
+        this.info.menuHeight = this.$menu.outerHeight() + this.options.borderTreshold;
+      },
       enable: function () {
         var options = this.options,
-            currentScrollTop = $('html').scrollTop(),
-            oldScrollTop = 0;
-
-        this.$menu = $(options.selectors.menu);
-        this.$has_subMenu = this.$menu.find('.menu-item-has-children');
-        this.$toggler = $('<a href="' + options.selectors.menu + '" id="' + options.selectors.toggler.replace('#', '') + '" class="' + options.classNames.togglerClass + '">' + options.texts.toggleText + '</a>');
-
-        this.$toggler.on({
+            info = this.info,
+            $body = this.$body,
+            $toggler = this.$toggler;
+            
+        this.$menu.css({top:'-' + info.menuHeight + 'px'});
+        
+        $toggler.on({
           click: function(event){
-            var $toggler = $(this),
-                $header = $toggler.parents('header').eq(0),
-                $target = $($toggler.attr('href'));
-
-            if ( $target.is('.' + options.classNames.activeClass) ) {
-              $toggler.removeClass(options.classNames.activeClass);
-              $target.removeClass(options.classNames.activeClass).next().trigger('focus');
-              $header.removeClass('menu-' + options.classNames.activeClass);
-
-              if ( currentScrollTop !== oldScrollTop ) {
-                $('html, body').animate({scrollTop:oldScrollTop}, '300', function(){
-                  currentScrollTop = oldScrollTop;
-                });
-              }
+            var $target = $($toggler.attr('href'));
+                
+            if ( $target.is('.' + options.classNames.active) ) {
+              $target.css({top:'-' + info.menuHeight + 'px'});
+              $toggler.removeClass(options.classNames.active);
+              $target.removeClass(options.classNames.active).next().trigger('focus');
+              $body.removeClass(info.name + '-' + options.classNames.active);
 
             } else {
-              $toggler.addClass(options.classNames.activeClass);
-              $target.addClass(options.classNames.activeClass).find('a').eq(0).trigger('focus');
-              oldScrollTop = $('html').scrollTop();;
-              currentScrollTop = 0
-              $('html, body').animate({scrollTop:currentScrollTop}, '300', function(){
-                $header.addClass('menu-' + options.classNames.activeClass);
-              });
+              $toggler.addClass(options.classNames.active);
+              
+              $target.css({top:'-3px'});
+              setTimeout(function(){
+                $target.addClass(options.classNames.active).find('a').eq(0).trigger('focus');
+                $body.addClass(info.name + '-' + options.classNames.active);
+              }, options.duration);
             }
             event.preventDefault();
           }
         });
-
-        this.$menu.before(this.$toggler);
-
-        this.$subMenus = this.$has_subMenu.each(function(){ return $(this).children('ul')});
-
-        this.$has_subMenu.children('ul').each(function(){
-          var $subMenu = $(this),
-              toggle_subMenu = function toggle_subMenu($newActiveSubMenuParent){
-                $newActiveSubMenuParent.toggleClass('toggled-' + options.classNames.activeClass);
-                $newActiveSubMenuParent.children('ul').slideToggle();
-              };
-
-          $subMenu.hide().prepend($('<li class="sub-menu-parent-link" />').prepend($subMenu.prev('a').clone())).prev('a').on({
-            click: function click(event){
-              var $newActiveSubMenuParent = $(this).parent('li'),
-                  $activeSubMenuParent = $newActiveSubMenuParent.siblings('.toggled-' + options.classNames.activeClass);
-
-              if ( $activeSubMenuParent.length > 0 ) {
-                toggle_subMenu($activeSubMenuParent)
-              }
-              toggle_subMenu($newActiveSubMenuParent);
-
-              event.preventDefault();
-            }
-          });
-        });
         
+        this.$nav.addClass(options.classNames.enabled);
         this.info.isActive = true;
 
       },
       disable: function () {
         var options = this.options;
 
-        this.$toggler.off('click').remove();
+        // this.$toggler.off('click').remove();
         this.$menu.find('a').off('click');
-        this.$menu.find('.sub-menu-parent-link').remove();
+        //this.$menu.find('.sub-menu-parent-link').remove();
         this.$menu.removeAttr('style').removeClass('active');
         this.$menu.find('ul').removeAttr('style');
+        this.$nav.removeClass(options.classNames.enabled);
         this.info.isActive = false;
       },
       resize: function resize(){
-        var disable = M.touch ? false : M.check_breakpoint(this.options.disableOn);
-        $.log(M.touch);
-        $.log(disable);
+        var disable = M.check_breakpoint(this.options.disableOn);
+        
         if ( disable ) {
           if ( this.info.isActive ) {
             this.disable();
@@ -333,12 +306,97 @@
         }
       },
       ready: function ready(){
+        var options = this.options;
+
+        this.$body = $('body');
+        this.$nav = $(options.selectors.nav);
+        this.$menu = $(options.selectors.menu);
+        this.set_menuHeight();
+        //this.$has_subMenu = this.$menu.find('.menu-item-has-children');
+        this.$toggler = $(options.selectors.toggler).addClass(options.classNames.toggler).html(options.texts.toggle);
+        
         this.resize();
       },
       setup: function setup(){
         return true;
       }
     },
+    
+  
+    /**
+     * accordion
+     * =========
+     */
+    accordion: {
+      options: {
+        disableOn: 0,
+        selectors: {
+          content: 'article .content',
+          heading: 'h3',
+          accordion: {
+            header: 'h3'
+          }
+        },
+        classNames: {
+          accordion: {
+            base: 'acc',
+            header: 'header',
+            content: 'content',
+            opened: 'opened',
+            closed: 'closed'
+          }
+        }
+      },
+      info: {},
+      open: function open($header, $content){
+        $header.removeClass(cNaccClosed);
+        $header.addClass(cNaccOpened);
+        $content.stop().slideDown(speed);
+      },
+      close: function close($header, $content){
+        $header.removeClass(cNaccOpened);
+        $header.addClass(cNaccClosed);
+        $content.stop().slideUp(speed);
+      },
+      init: function init(){
+        var classNames = this.options.classNames,
+            selectors = this.options.selectors,
+            cNaccBase =  classNames.accordion.base + '-',
+            cNaccHeader =  classNames.accordion.base + '-' + classNames.accordion.header,
+            cNaccContent =  classNames.accordion.base + '-' + classNames.accordion.content,
+            cNaccOpened =  classNames.accordion.base + '-' + classNames.accordion.opened,
+            cNaccClosed =  classNames.accordion.base + '-' + classNames.accordion.closed,
+            accordion = this;
+      
+        $(selectors.content).children(selectors.accordion.header).each(function(index){
+          var $header = $(this).addClass(cNaccClosed).addClass(cNaccHeader),
+              headerHtml = $header.html(),
+              $accAnchor = $('<a href="#acc-' + index + '" />').html(headerHtml);
+               
+          $header.nextUntil(selectors.heading).wrapAll('<div class="' + cNaccContent + '" id="' + cNaccBase + index + '"/>');
+          $header.empty().append($accAnchor);
+          
+          $accAnchor.on('click', function(event){
+            var $content = $header.next('.' + cNaccContent);
+            
+            if ( $header.is('.' + cNaccOpened) ) {
+              accordion.close($header, $content);
+            } else {
+              accordion.open($header, $content);
+            }
+            event.preventDefault();        
+          });      
+        });
+      },
+      resize: function resize(){
+      },
+      ready: function ready(){
+        this.init();
+      },
+      setup: function setup(){
+        return true;
+      }
+    }
   };
   
   /**
