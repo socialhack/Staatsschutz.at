@@ -33,7 +33,9 @@ h1, h2, h3, h4, h5, h6, th, bold, strong, a:link, a:visited, dt{
   font-family:'fira_sansbold';
   font-weight:normal;
 }
-
+.old{
+  display:none;
+}
 
 .header,
 .marketing,
@@ -79,17 +81,6 @@ h1, h2, h3, h4, h5, h6, th, bold, strong, a:link, a:visited, dt{
     float: right;
 }
 
-@media (max-width: 900px) {
-    .container {
-        max-width: 100%;
-    }
-
-    #actionarea {
-        max-width: 100%;
-        float: none;
-    }
-
-}
 
 section ul,
 section ol {
@@ -162,20 +153,26 @@ header .wrapper{
   margin-right:auto;
 }
 #logo{
+  display:inline-block;
+  width:100%;
   max-width:31.7em;
   margin-bottom:1em;
 }
 
 #site-header h1{
-  font-size:4.4em;
+  font-size:3.2em;
   margin-top:0;
-  margin-bottom:0.2em;
+  margin-bottom:0.25em;
 }
 #site-header h2{
-  font-size:2.8em;
+  font-size:2.2em;
   line-height:1.8;
-  max-width:40%;
-  margin-bottom:0.5em;
+  margin-bottom:0.4em;
+}
+#site-header h2 .urgent{
+  display: block;
+  position: absolute;
+  left: -999em;
 }
 #site-header a{
   display:block;
@@ -191,27 +188,36 @@ header .wrapper{
 #site-header a:focus{
   background:#507884;
 }
+#site-header a:active{
+  background:#333333;
+}
+#site-header h2 a{
+  display:inline-block;
+  padding:0 0.5em 0.2em 0.5em;
+}
 #site-header .subheadline{
   background:#333333;
-  font-size:2em;
+  font-size:1.4em;
   line-height:2;
   margin:0;
 }
 #site-header #akvorrat {
   position: absolute;
-  bottom: 1.5em;
+  bottom: 4em;
   right: 1.5em;
-  padding:1.5em;
+  padding:0.5em;
   max-width:15%;
+  width:14.4em;
   border-bottom:3px solid #EB4B34;
 }
 #site-header #akvorrat:link,
 #site-header #akvorrat:visited{
-  background:#333333;
+  background:none;
 }
 #site-header #akvorrat:hover,
-#site-header #akvorrat:focus{
-  background:#507884;
+#site-header #akvorrat:focus,
+#site-header #akvorrat:active{
+  background:#333333;
 }
 
 
@@ -224,6 +230,7 @@ header .wrapper{
 	font-size:5em;
 	font-weight:bold;
 }*/
+
 
 .actions {
     margin: 0;
@@ -600,8 +607,39 @@ input.inputText {
     font-size: 1.5em;
 }
 
-@media only screen and (max-width: 768px) {
-    #akvorrat {
-        display: none
-    }
+
+@media all and (min-width: 450px) {
+  #site-header h1{
+    font-size:4.4em;
+  }
+  #site-header h2{
+    font-size:2.8em;
+  }
+  #site-header .subheadline{
+    font-size:2em;
+  }
+  #site-header #akvorrat {
+    bottom: 5em;
+    right: 2em;
+    padding:1em;
+  }
 }
+@media all and (min-width: 600px) {
+  #site-header h2 .urgent{
+    display: inline;
+    position: static;
+    left:auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

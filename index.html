@@ -29,7 +29,11 @@
     <link rel="stylesheet" type="text/css" href="./css/default.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="icon" href="./favicon.ico" />
+    <script type="text/javascript" src="./js/modernizr-3.2.0-respond-1.4.2.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-addons.js"></script>
     <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.plugins.js"></script>
+    <script type="text/javascript" src="./js/theme.js"></script>
     <script type="text/javascript" src="./js/count.js"></script>
     <script type="text/javascript" src="./js/count_paper.js"></script>
     <script type="text/javascript" src="./js/staatsschutz.js"></script>
@@ -39,31 +43,35 @@
 <body id="home">
     
     <!-- START body header -->
-    <header id="site-header">
+    <header id="site-header" class="container">
+      <div class="inner wrapper">
         <h1>Stoppt das <em>Staatsschutzgesetz!</em></h1>
-        <h2 class="wrapper"><a href="#unterschreiben">Rechtzeitig Petition Unterschreiben</a></h2>
-        <img src="./img/notext.png" id="logo" class="wrapper" alt="Petition gegen das geplante Staatsschutzgesetz - Logo" />
-    		<p class="subheadline"><strong>Kein neuer Inlandsgeheimdienst in Österreich!</strong></p>
-        <a href="https://www.akvorrat.at/" id="akvorrat"><img src="./img/akvorrat.png" alt="AKVorrat - Logo" title="eine Aktion des AKVorrat" /></a>
+        <h2><a href="#unterschreiben"><span class="urgent">Rechtzeitig</span> Petition unterschreiben!</a></h2>
+        <img src="./img/notext.png" id="logo" alt="Petition gegen das geplante Staatsschutzgesetz - Logo" />
+      </div>
+      <p class="subheadline"><strong>Kein neuer Inlandsgeheimdienst in Österreich!</strong></p>
+      <a href="https://www.akvorrat.at/" id="akvorrat"><img src="./img/akvorrat.png" alt="AKVorrat - Logo" title="eine Aktion des AKVorrat" /></a>
     </header>
     <!-- END body header -->
     
     <!-- START primary navigation -->
     <nav id="primary">
+      <h3><a href="#primary-first" class="hide-text">Navigation</a></h3>
       <ul class="inner menu clearfix">
-        <li class=""><a href="#fakten">Fakten</a></li>
-        <li class=""><a href="#kritik">Kritik</a></li>
-        <li class=""><a href="#forderungen">Forderungen</a></li>
-        <li class=""><a href="#unterschreiben">Unterschreiben</a></li>
-        <li class=""><a href="#jetzt-spenden">Jetzt spenden!</a></li>
+        <li class="first leaf"><a id="primary-first" href="#fakten">Fakten</a></li>
+        <li class="leaf"><a href="#kritik">Kritik</a></li>
+        <li class="leaf"><a href="#forderungen">Forderungen</a></li>
+        <li class="leaf"><a href="#unterschreiben">Unterschreiben</a></li>
+        <li class="last leaf"><a href="#jetzt-spenden">Jetzt spenden!</a></li>
       </ul>
     </nav>
     <!-- END primary navigation -->
     
     <!-- START meta navigation -->
     <nav id="meta">
+      <h3><a href="#meta-first" class="hide-text">Navigation</a></h3>
       <ul class="inner menu clearfix">
-        <li class=""><a href="#unterschreiben">Unterschreiben</a></li>
+        <li class=""><a id="meta-first" href="#unterschreiben">Unterschreiben</a></li>
         <li class=""><a href="#jetzt-spenden">Jetzt spenden!</a></li>
         <li class=""><a href="#weitersagen">Downloads</a></li>
         <li class=""><a href="#weitersagen">Weitersagen</a></li>
@@ -73,9 +81,10 @@
     <!-- END meta navigation -->
     
     <!-- START teaser stage -->
-    <section class="teaser-stage">
-      <!-- START body slider -->
-      <div id="slider" class="slider">
+    <section class="teaser-stage container">
+      <div class="inner wrapper">
+        <!-- START body slider -->
+        <div id="slider" class="slider">
           <div id="slideleft" class="slide noSelect slideUnselectable" onclick="slideBackwards()">&lt;</div>
           <div class="slideColumn">
               <div id="slideContent" class="slideContent noSelect">
@@ -87,66 +96,69 @@
               </div>
           </div>
           <div id="slideright" class="slide noSelect slideUnselectable" onclick="slideForwards()">&gt;</div>
-      </div>
-      <!-- END body slider -->    
-        
-      <!-- START progress bar -->
-      <div id="progress">
-        <div class="inner progress-bar">
-          <div class="progress-volume"></div>
-          <p class="progress-description">Wir benötigen deine Unterschrift!</p>
         </div>
+        <!-- END body slider -->    
+          
+        <!-- START progress bar -->
+        <div id="progress">
+          <div class="inner progress-bar">
+            <div class="progress-volume"></div>
+            <p class="progress-description">Wir benötigen deine Unterschrift!</p>
+          </div>
+        </div>
+        <!-- END progress bar -->
+        
+        <!-- START countdown -->
+        <p class="countdown">Das Gesetz muss zurück an den Start!</p>
+        <!-- END countdown -->
       </div>
-      <!-- END progress bar -->
-      
-      <!-- START countdown -->
-      <p class="countdown">Das Gesetz muss zurück an den Start!</p>
-      <!-- END countdown -->
     </section>
     <!-- END teaser stage -->
     
     <!--START body main-->
-    <main>
-      <section class="articles">
-        <div class="inner">
-          <article id="fakten">
-            <div class="inner">
-              <h2></h2>
-              <div class="content clearfix">
+    <main class="container">
+      <div class="inner wrapper">
+        <section class="articles">
+          <div class="inner">
+            <article id="fakten">
+              <div class="inner">
+                <h2></h2>
+                <div class="content clearfix">
+                </div>
               </div>
-            </div>
-          </article>
-          <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
-          <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
-          <article id="kritik">
-            <div class="inner">
-              <h2></h2>
-              <div class="content clearfix">
+            </article>
+            <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
+            <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
+            <article id="kritik">
+              <div class="inner">
+                <h2></h2>
+                <div class="content clearfix">
+                </div>
               </div>
-            </div>
-          </article>
-          <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
-          <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
-          <article id="forderungen">
-            <div class="inner">
-              <h2></h2>
-              <div class="content clearfix">
+            </article>
+            <button class="subscribe"><a href="#unterschreiben">Unterschreiben</a></button>
+            <button class="donate-now"><a href="#jetzt-spenden">Jetzt spenden!</a></button>
+            <article id="forderungen">
+              <div class="inner">
+                <h2></h2>
+                <div class="content clearfix">
+                </div>
               </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <aside class="sidebar">
-        <div class="inner">
-          <div id="subscribe" class="widget">
-            <h3>Unterschreiben</h3>
-            <div class=="content">
+            </article>
+          </div>
+        </section>
+        <aside class="sidebar">
+          <div class="inner">
+            <div id="subscribe" class="widget">
+              <h3>Unterschreiben</h3>
+              <div class=="content">
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </main>
-        
+       <div class="old">
         <div class="row">
             
             <!--START side column-->
@@ -418,7 +430,7 @@
         </div>
     </div>
     <!--END body main-->
-    
+    </div>
     <!--START body footer -->
     <footer id="footer">
         <p>Diese Kampagne wird unterstützt von</p>
