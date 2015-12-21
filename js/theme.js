@@ -335,10 +335,13 @@
     accordion: {
       options: {
         disableOn: 0,
+        duration: 350,
         selectors: {
           content: 'article .content',
           heading: 'h3',
+          no: '.no-acc',
           accordion: {
+            no: '.no-acc',
             header: 'h3'
           }
         },
@@ -354,37 +357,36 @@
       },
       info: {},
       open: function open($header, $content){
-        $header.removeClass(cNaccClosed);
-        $header.addClass(cNaccOpened);
-        $content.stop().slideDown(speed);
+        var classNames = this.classNames;
+        
+        $header.removeClass(classNames.closed);
+        $header.addClass(classNames.opened);
+        $content.stop().slideDown(this.options.duration);
       },
       close: function close($header, $content){
-        $header.removeClass(cNaccOpened);
-        $header.addClass(cNaccClosed);
-        $content.stop().slideUp(speed);
+        var classNames = this.classNames;
+        
+        $header.removeClass(classNames.opened);
+        $header.addClass(classNames.closed);
+        $content.stop().slideUp(this.options.duration);
       },
       init: function init(){
-        var classNames = this.options.classNames,
+        var classNames = this.classNames,
             selectors = this.options.selectors,
-            cNaccBase =  classNames.accordion.base + '-',
-            cNaccHeader =  classNames.accordion.base + '-' + classNames.accordion.header,
-            cNaccContent =  classNames.accordion.base + '-' + classNames.accordion.content,
-            cNaccOpened =  classNames.accordion.base + '-' + classNames.accordion.opened,
-            cNaccClosed =  classNames.accordion.base + '-' + classNames.accordion.closed,
             accordion = this;
       
-        $(selectors.content).children(selectors.accordion.header).each(function(index){
-          var $header = $(this).addClass(cNaccClosed).addClass(cNaccHeader),
+        $(selectors.content).children(selectors.accordion.header).not(selectors.accordion.no).each(function(index){
+          var $header = $(this).addClass(classNames.closed).addClass(classNames.header),
               headerHtml = $header.html(),
               $accAnchor = $('<a href="#acc-' + index + '" />').html(headerHtml);
                
-          $header.nextUntil(selectors.heading).wrapAll('<div class="' + cNaccContent + '" id="' + cNaccBase + index + '"/>');
+          $header.nextUntil(selectors.heading).wrapAll('<div class="' + classNames.content + '" id="' + classNames.base + index + '"/>');
           $header.empty().append($accAnchor);
           
           $accAnchor.on('click', function(event){
-            var $content = $header.next('.' + cNaccContent);
+            var $content = $header.next('.' + classNames.content);
             
-            if ( $header.is('.' + cNaccOpened) ) {
+            if ( $header.is('.' + classNames.opened) ) {
               accordion.close($header, $content);
             } else {
               accordion.open($header, $content);
@@ -396,6 +398,15 @@
       resize: function resize(){
       },
       ready: function ready(){
+        var classNames = this.options.classNames;
+            
+        this.classNames = {
+          base: classNames.accordion.base + '-',
+          header: classNames.accordion.base + '-' + classNames.accordion.header,
+          content: classNames.accordion.base + '-' + classNames.accordion.content,
+          opened: classNames.accordion.base + '-' + classNames.accordion.opened,
+          closed: classNames.accordion.base + '-' + classNames.accordion.closed
+        };
         this.init();
       },
       setup: function setup(){

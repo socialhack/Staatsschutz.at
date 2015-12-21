@@ -353,6 +353,58 @@ header > .inner{
 #meta{
   display:none;
 }
+
+/**
+ * Teaser stage
+ * ============
+ * 1. countdown
+ * 2. progress bar
+ * 3. slider
+ */
+.teaser-stage > .inner{
+  padding:1.5em 0;
+}
+.teaser-stage .countdown{
+  font-size:2em;
+  text-align:center;
+}
+.progress-bar {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #003b4c;
+  border-radius: 0.3em;
+}
+.progress-volume {
+  height: 100%;
+  width: 0.01%;
+  position: absolute;
+  transition: width 4s ease;
+  background: #8ebf2a;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4b34+0,d86f31+15,e59c2d+30,eacb2e+45,b5ef37+60,78f43a+75,3af46c+90,3affad+100 */
+  background: rgb(235,75,52); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNGIzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE1JSIgc3RvcC1jb2xvcj0iI2Q4NmYzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2U1OWMyZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ1JSIgc3RvcC1jb2xvcj0iI2VhY2IyZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2I1ZWYzNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzc4ZjQzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iIzNhZjQ2YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYWZmYWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left, rgba(235,75,52,1) 0%, rgba(216,111,49,1) 15%, rgba(229,156,45,1) 30%, rgba(234,203,46,1) 45%, rgba(181,239,55,1) 60%, rgba(120,244,58,1) 75%, rgba(58,244,108,1) 90%, rgba(58,255,173,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(235,75,52,1) 0%,rgba(216,111,49,1) 15%,rgba(229,156,45,1) 30%,rgba(234,203,46,1) 45%,rgba(181,239,55,1) 60%,rgba(120,244,58,1) 75%,rgba(58,244,108,1) 90%,rgba(58,255,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(235,75,52,1) 0%,rgba(216,111,49,1) 15%,rgba(229,156,45,1) 30%,rgba(234,203,46,1) 45%,rgba(181,239,55,1) 60%,rgba(120,244,58,1) 75%,rgba(58,244,108,1) 90%,rgba(58,255,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4b34', endColorstr='#3affad',GradientType=1 ); /* IE6-8 */
+}
+.ie9 .progress-volume{
+  filter:none;
+}
+.progress-description {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  padding: 1.1em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 10px #fff;
+  font-size: 1.5em;
+}
+
+
+
 .actions {
     margin: 0;
 }
@@ -556,9 +608,10 @@ input.inputText {
 }
 
 .slideContent {
-    width: 40%;
+    width: 90%;
     overflow: hidden;
     margin: auto;
+    font-size:1.8em;
 }
 
 .slider {
@@ -646,6 +699,7 @@ input.inputText {
     animation-duration: .6s;
 }
 
+
 @keyframes slideForwards {
     0% {
         opacity: 1;
@@ -694,48 +748,133 @@ input.inputText {
 }
 
 /**
- * Progress bar
- * ============
+ * Content
+ * =======
  */
-.progress-bar {
-    position: relative;
-    overflow: hidden;
-    border: solid 1px #003b4c;
-    border-radius: 0.3em;
+.articles article,
+.articles figure{
+  margin:0 0 2em 0;
 }
-.progress-volume {
-    background: #8ebf2a;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #b6f235 0%, #8ebf2a 50%, #b6f235 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4b34+0,d86f31+15,e59c2d+30,eacb2e+45,b5ef37+60,78f43a+75,3af46c+90,3affad+100 */
-background: rgb(235,75,52); /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNGIzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE1JSIgc3RvcC1jb2xvcj0iI2Q4NmYzMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2U1OWMyZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ1JSIgc3RvcC1jb2xvcj0iI2VhY2IyZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2I1ZWYzNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzc4ZjQzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iIzNhZjQ2YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYWZmYWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(left, rgba(235,75,52,1) 0%, rgba(216,111,49,1) 15%, rgba(229,156,45,1) 30%, rgba(234,203,46,1) 45%, rgba(181,239,55,1) 60%, rgba(120,244,58,1) 75%, rgba(58,244,108,1) 90%, rgba(58,255,173,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(235,75,52,1) 0%,rgba(216,111,49,1) 15%,rgba(229,156,45,1) 30%,rgba(234,203,46,1) 45%,rgba(181,239,55,1) 60%,rgba(120,244,58,1) 75%,rgba(58,244,108,1) 90%,rgba(58,255,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(235,75,52,1) 0%,rgba(216,111,49,1) 15%,rgba(229,156,45,1) 30%,rgba(234,203,46,1) 45%,rgba(181,239,55,1) 60%,rgba(120,244,58,1) 75%,rgba(58,244,108,1) 90%,rgba(58,255,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4b34', endColorstr='#3affad',GradientType=1 ); /* IE6-8 */
-
-    height: 100%;
-    width: 0.01%;
-    position: absolute;
-    transition: width 4s ease;
+.articles article > .inner{
+  box-shadow:0px 0px 0.3em 0.1em #E4E5E6;
+  padding:1.5em;
 }
-.progress-description {
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
-    padding: 1.1em;
-    position: relative;
-    z-index: 2;
-    text-shadow: 0 0 10px #fff;
-    font-size: 1.5em;
+article .title{
+  font-size:2em;
+}
+article .content{
+  font-size:1.4em;
+}
+.content a:link,
+.content a:visited{
+  color:#337AB7;
+  text-decoration:none;
+}
+.content a:hover,
+.content a:focus{
+  color:#23527C;
+  outline:0;
+}
+.content a:active{
+  text-decoration:underline;
+}
+.content .eight-points,
+.content .schedule,
+.content .background,
+.content .no-secrets,
+.content .database{
+  position:relative;
+  padding-left:1.5em;
+}
+.content .eight-points:before,
+.content .schedule:before,
+.content .background:before,
+.content .no-secrets:before,
+.content .database:before{
+  display:inline-block;
+  height:1em;
+  line-height:1em;
+  width: 1em;
+  position:absolute;
+  left:0;
+  bottom:0.183113em;
+  padding-right:0.4em;
+  text-align: center;
+  text-indent: 0px;
+  font-family: FontAwesome;
+  font-size: 1em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#EB4B34;
+}
+.content .eight-points:before{
+  content:"\f00c";
+}
+.content .schedule:before{
+  content:"\f017";
+}
+.content .background:before{
+  content:"\f12e";
+}
+.content .no-secrets:before{
+  content:"\f21b";
+}
+.content .database:before{
+  content:"\f1c0";
+}
+
+/** Accordion **/
+.content .acc-content + .acc-header{
+  border-top:1px solid #EFEFEF;
+  padding-top:0.5em;
+}
+.content .acc-header a{
+  display:block;
+  position:relative;
+}
+.content .acc-header a:hover,
+.content .acc-header a:focus{
+  text-decoration:none;
+  outline:0;
+}
+.content .acc-header a:after {  
+  display:inline-block;
+  height:1em;
+  line-height:1em;
+  width: 1em;
+  position:absolute;
+  right:0;
+  bottom:0.183113em;
+  padding-left:0.4em;
+  text-align: center;
+  text-indent: 0px;
+  font-family: FontAwesome;
+  font-size: 1em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:inherit;
+}
+.content .acc-header.acc-closed a{
+}
+.content .acc-header.acc-closed a:hover{
+
+}
+.content .acc-header.acc-closed a:after {
+  content:"\f067";
+}
+.content .acc-header.acc-opened a{
+
+}
+.content .acc-header.acc-opened a:after {
+  content:"\f068";
+}
+.content .acc-content{
+  display:none;
+}
+.content .acc-content + h2{
+  margin-top:2em;
 }
 
 
