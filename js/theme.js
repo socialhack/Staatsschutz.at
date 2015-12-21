@@ -412,7 +412,50 @@
       setup: function setup(){
         return true;
       }
-    }
+    },
+    
+    /**
+     * Videos (Youtube)
+     * ================
+     * Resizes youtobe iframes dynamicly
+     */
+    videos: {
+      options: {
+        selectors:{
+          container: '.articles > .inner',
+          video: '.video',
+          youtube: '.youtube',
+          iframe: 'iframe'
+        }
+      },
+      resize_iframes: function resize_iframe(){
+        var selectors = this.options.selectors;
+      
+        this.$videos.each(function(index){
+          var $container = $(this),
+              $iframe = $container.children(selectors.iframe),
+              containerWidth = $container.width(),
+              width = $iframe.width(),
+              height = $iframe.height(),
+              scale = containerWidth / width;
+          
+          $iframe.width(Math.round(width * scale));
+          $iframe.height(Math.round(height * scale));
+        });
+      },
+      resize: function resize(){
+        this.resize_iframes();
+      },
+      ready: function ready(){
+        var selectors = this.options.selectors;
+        
+        this.$videos = $(selectors.container).children(selectors.video);
+        this.resize_iframes();
+      },
+      setup: function setup(){
+        return true;
+      }
+     }
   };
   
   /**
