@@ -417,11 +417,6 @@ header > .inner{
     list-style-type: none;
 }
 
-.shareicons li {
-    display: inline-block;
-    margin: .3em 0.5em;
-    width: auto;
-}
 
 .specialemphasis {
     max-width: 35em;
@@ -433,43 +428,8 @@ header > .inner{
     font-size: 1.2em;
 }
 
-.glossar dl {
-    width: 45em;
-    margin: 1em auto;
-}
 
 /* Float-contain */
-
-.glossar:after {
-    content: '.';
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.glossar {
-    display: inline-block;
-}
-
-.glossar {
-    display: block;
-}
-
-.glossar dt {
-    display: block;
-    width: 5em;
-    clear: left;
-    float: left;
-    margin: 0 0 0.75em;
-}
-
-.glossar dd {
-    display: block;
-    width: 40em;
-    float: left;
-    margin: 0 0 0.75em;
-}
 
 footer {
     margin-top: 20px;
@@ -509,23 +469,6 @@ footer a:focus {
     background-color: #013c4e
 }
 
-input[type=text],
-input[type=email],
-input[type="submit"],
-select {
-    padding: .45em .6em;
-    margin: 0.3em 0;
-}
-
-input[type=text],
-input[type=email],
-select {
-    padding: .45em .6em;
-    margin: 0.3em 0;
-    border: 1px solid #aaa;
-    width: 19em;
-    max-width: 100%;
-}
 
 .inputSubmit {
     background: linear-gradient(#F7F7F7, #DDD);
@@ -550,10 +493,6 @@ label {
     max-width: 100%;
 }
 
-.signformLabel {
-    display: inline-block;
-    min-width: 6.4em;
-}
 
 #edit-submitted-deine-botschaft {
     width: 97%;
@@ -828,17 +767,19 @@ article .content{
 }
 .content .eight-points,
 .content .schedule,
-.content .background,
 .content .no-secrets,
-.content .database{
+.content .database,
+.content .background,
+.content .conclusion{
   position:relative;
   padding-left:1.5em;
 }
 .content .eight-points:before,
 .content .schedule:before,
-.content .background:before,
 .content .no-secrets:before,
-.content .database:before{
+.content .database:before,
+.content .background:before,
+.content .conclusion:before{
   display:inline-block;
   height:1em;
   line-height:1em;
@@ -862,14 +803,17 @@ article .content{
 .content .schedule:before{
   content:"\f017";
 }
-.content .background:before{
-  content:"\f12e";
-}
 .content .no-secrets:before{
   content:"\f21b";
 }
 .content .database:before{
   content:"\f1c0";
+}
+.content .background:before{
+  content:"\f12e";
+}
+.content .conclusion:before{
+  content:"\f0e2";
 }
 
 /** Accordion **/
@@ -926,6 +870,18 @@ article .content{
 }
 
 
+/**
+ * Sidebar
+ * =======
+ */
+
+
+
+
+/**
+ * Media queries
+ * =============
+ */
 @media all and (min-width: 400px) {
   #site-header .subheadline{
     font-size:1.4em;
