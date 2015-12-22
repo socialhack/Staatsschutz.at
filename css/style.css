@@ -751,11 +751,59 @@ input.inputText {
  * Content
  * =======
  */
+
+.articles .button{
+  display:block;
+  border:none;
+  border-radius:0;
+  width:50%;  
+  text-align:center;
+  margin:0 0 2em 0;
+  padding:0;
+}
+.articles .button.subscribe{
+  float:left;
+}
+.articles .button.donate-now{
+  float:right;
+}
+.articles .button a{
+  display:block;
+  font-size:1.6em;
+  line-height:2;
+  text-decoration:none;
+  color:#FFFFFF;
+  margin:0 1em;
+}
+.articles .button.subscribe a{
+  margin-left:0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4b34+0,af2828+100 */
+  background: #eb4b34; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNGIzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhZjI4MjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #eb4b34 0%, #af2828 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #eb4b34 0%,#af2828 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #eb4b34 0%,#af2828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4b34', endColorstr='#af2828',GradientType=0 ); /* IE6-8 */
+}
+.articles .button.donate-now a{
+  margin-right:0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#57b31c+0,368c00+100 */
+  background: #57b31c; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU3YjMxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNjhjMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #57b31c 0%, #368c00 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #57b31c 0%,#368c00 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #57b31c 0%,#368c00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57b31c', endColorstr='#368c00',GradientType=0 ); /* IE6-8 */
+}
 .articles article,
 .articles figure{
   margin:0 0 2em 0;
+  clear:both;
 }
-.articles article > .inner{
+.articles article > .inner,
+.articles figure{
   box-shadow:0px 0px 0.3em 0.1em #E4E5E6;
   padding:1.5em;
 }
@@ -883,6 +931,9 @@ article .content{
     font-size:1.4em;
     line-height:2;
   }
+  .articles .button a{
+    font-size:1.8em;
+  }
 }
 @media all and (min-width: 450px) {
   #site-header h1{
@@ -911,6 +962,12 @@ article .content{
     display: inline;
     position: static;
     left:auto;
+  }
+  .articles .button.subscribe a{
+    margin-left:1em;
+  }
+  .articles .button.donate-now a{
+    margin-right:1em;
   }
 }
 @media all and (min-width: 1024px) {
@@ -944,6 +1001,16 @@ article .content{
   }
   #primary li.first a{
     margin-left:-1em;
+  }
+  .articles .button a{
+    font-size:2em;
+    margin:0 1.5em;
+  }
+  .articles .button.subscribe a{
+    margin-left:1.5em;
+  }
+  .articles .button.donate-now a{
+    margin-right:1.5em;
   }
 }
 
