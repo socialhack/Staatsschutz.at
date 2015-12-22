@@ -44,24 +44,6 @@ h1, h2, h3, h4, h5, h6, th, bold, strong, a:link, a:visited, dt{
     padding-left: 1.5em;
 }
 
-.sidebar {
-    background: #D4D3D3;
-}
-
-.sidetitle {
-    padding: .5em;
-    color: #fff;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: bold;
-    background: #003b4c;
-    border-radius: 0.4em 0.4em 0 0;
-}
-
-.sidetext {
-    padding: 1em;
-}
-
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -874,7 +856,23 @@ article .content{
  * Sidebar
  * =======
  */
-
+aside .widget{
+  border-radius:5px;
+  border-top:5px solid #333333;
+  box-shadow:0px 0px 0.3em 0.1em #E4E5E6;
+  margin:0 0 3em 0;
+}
+aside .widget .title{
+  padding:0 1em 0.2em 1em;
+  font-size:1.6em;
+  line-height:2;
+  background:#EFEFEF;
+  margin:0;
+}
+aside .widget .content{
+  font-size:1.4em;
+  padding:1em 1.142857em;
+}
 
 
 
