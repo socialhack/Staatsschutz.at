@@ -452,60 +452,6 @@ footer a:focus {
 }
 
 
-.inputSubmit {
-    background: linear-gradient(#F7F7F7, #DDD);
-}
-
-.form-required {
-    color: #f00;
-}
-
-label {
-    margin-right: 0.4em;
-    font-size: .95em;
-}
-
-.signpetition {
-    text-align: left;
-}
-
-.signpetition ol li {
-    width: 85%;
-    display: list-item;
-    max-width: 100%;
-}
-
-
-#edit-submitted-deine-botschaft {
-    width: 97%;
-    font-family: inherit;
-    font-size: inherit;
-    padding: .45em .6em;
-    margin: 0.3em 0;
-    border: 1px solid #aaa;
-}
-
-input.form-submit,
-a.button,
-#spenden-button {
-    color: #fff;
-    background: #013c4e;
-    border: 1px solid #A4D939;
-    border-radius: .3em;
-    padding: .5em;
-    margin: .2em 0;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-input.inputText {
-    width: 16em;
-}
-
-.button-primary {
-    font-size: 1.2em;
-}
 
 .demand_short {
     font-weight: bold;
@@ -730,6 +676,7 @@ input.inputText {
 }
 article .title{
   font-size:2em;
+  margin-bottom:0.6em;
 }
 article .content{
   font-size:1.4em;
@@ -754,7 +701,7 @@ article .content{
 .content .background,
 .content .conclusion{
   position:relative;
-  padding-left:1.5em;
+  padding-left:1.281793em;
 }
 .content .eight-points:before,
 .content .schedule:before,
@@ -864,7 +811,7 @@ aside .widget{
 }
 aside .widget .title{
   padding:0 1em 0.2em 1em;
-  font-size:1.6em;
+  font-size:1.8em;
   line-height:2;
   background:#EFEFEF;
   margin:0;
@@ -873,7 +820,96 @@ aside .widget .content{
   font-size:1.4em;
   padding:1em 1.142857em;
 }
+aside #subscribe{
+  border-color:#af2828;
+}
+aside #subscribe .title{
+  background:#EB4B34;
+  color:#FFFFFF;
+}
+aside #subscribe label{
+  min-width:10em;
+  display:block;
+  float:left;
+}
+aside #subscribe button:hover, 
+aside #subscribe button:focus, 
+aside #subscribe input[type="submit"]:focus, 
+aside #subscribe input[type="submit"]:hover{
+  color:#FFFFFF;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4b34+0,af2828+100 */
+  background: #eb4b34; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ViNGIzNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhZjI4MjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #eb4b34 0%, #af2828 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #eb4b34 0%,#af2828 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #eb4b34 0%,#af2828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4b34', endColorstr='#af2828',GradientType=0 ); /* IE6-8 */
+}
 
+input.form-submit,
+a.button,
+#spenden-button {
+    color: #fff;
+    background: #013c4e;
+    
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#507884+0,003b4c+100 */
+background: #507884; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUwNzg4NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDNiNGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #507884 0%, #003b4c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #507884 0%,#003b4c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #507884 0%,#003b4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', endColorstr='#003b4c',GradientType=0 ); /* IE6-8 */
+
+    border-radius: 0.3em;
+    border:none;
+    padding: 0.5em;
+    margin: 0.2em 0;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.inputSubmit {
+    background: linear-gradient(#F7F7F7, #DDD);
+}
+
+.form-required {
+    color: #f00;
+}
+
+label {
+    margin-right: 0.4em;
+    font-size: .95em;
+}
+
+.signpetition {
+    text-align: left;
+}
+
+.signpetition ol li {
+    width: 85%;
+    display: list-item;
+    max-width: 100%;
+}
+
+
+#edit-submitted-deine-botschaft {
+    width: 97%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: .45em .6em;
+    margin: 0.3em 0;
+    border: 1px solid #aaa;
+}
+
+input.inputText {
+    width: 16em;
+}
+
+.button-primary {
+    font-size: 1.2em;
+}
 
 
 /**
