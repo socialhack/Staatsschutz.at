@@ -356,21 +356,23 @@ fieldset{
   margin:0 0 0.5em 0;
 }
 button, input, select, textarea{
-background:#FFFFFF;
-border:none;
-padding:0.5em 1em;
-border-radius:5px;
-margin:0 2% 0.5em 0;
-color:#666666;
-max-width:98%;
+  background:#FFFFFF;
+  border:none;
+  padding:0 1%;
+  border-radius:5px;
+  line-height:2;
+  margin:0 2% 0.5em 0;
+  color:#666666;
+  max-width:98%;
+  text-indent:0.8em;
 }
 .form-textarea-wrapper textarea{
-color:#666666;
+  color:#666666;
 }
 input,
 select,
 textarea{
-transition:all ease 500ms;
+  transition:all ease 500ms;
 }
 
 input[type="text"],
@@ -378,32 +380,32 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+select,
 textarea{
-box-shadow:inset 0 0 25px -5px rgba(0, 0, 0, 0.2);
+  box-shadow:inset 0 0 25px -5px rgba(0, 0, 0, 0.1);
+  border:1px solid #BFBFBF;
 }
 textarea{
-padding:1em;
+  padding:1em;
 }
 input[type="text"],
 input[type="password"]{
-text-indent:1em;
 }
-input[type="text"]:focus,
-input[type="password"]:focus,
+input:focus,
 select:focus,
 textarea:focus{
-box-shadow:inset 0 0 15px -5px rgba(0, 0, 0, 0.3);
-color:#000000;
+  box-shadow:inset 0 0 15px -5px rgba(0, 0, 0, 0.3);
+  color:#000000;
 }
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"]{
-text-align:center;
-padding-left:1em;
-padding-right:1em;
-text-indent:0;
-border:1px solid #D5D5D5;
+  text-align:center;
+  padding-left:1em;
+  padding-right:1em;
+  text-indent:0;
+  border:1px solid #D5D5D5;
 }
 button:hover,
 button:focus,

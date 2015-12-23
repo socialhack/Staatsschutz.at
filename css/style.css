@@ -88,6 +88,9 @@ section ol {
 .indent {
     margin: 2em 0;
 }
+.form-required {
+    color: #FF0000;
+}
 
 .shadow {
     border-radius: 0.4em;
@@ -802,6 +805,8 @@ article .content{
 /**
  * Sidebar
  * =======
+ * 1. generic
+ * 2. subcription form
  */
 aside .widget{
   border-radius:5px;
@@ -827,10 +832,26 @@ aside #subscribe .title{
   background:#EB4B34;
   color:#FFFFFF;
 }
+aside #subscribe .form-item{
+  padding:0.5em 0;
+}
 aside #subscribe label{
   min-width:10em;
   display:block;
   float:left;
+  margin:0 1em 0 0;
+  line-height:2;
+}
+aside #subscribe input,
+aside #subscribe select{
+  max-width:16em;
+  margin-bottom:0;
+}
+aside #subscribe input[type="checkbox"]{
+  margin-top:0.4em;
+}
+aside #subscribe textarea{
+  margin-bottom:0;
 }
 aside #subscribe button:hover, 
 aside #subscribe button:focus, 
@@ -874,42 +895,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
     background: linear-gradient(#F7F7F7, #DDD);
 }
 
-.form-required {
-    color: #f00;
-}
-
-label {
-    margin-right: 0.4em;
-    font-size: .95em;
-}
-
-.signpetition {
-    text-align: left;
-}
-
-.signpetition ol li {
-    width: 85%;
-    display: list-item;
-    max-width: 100%;
-}
-
-
-#edit-submitted-deine-botschaft {
-    width: 97%;
-    font-family: inherit;
-    font-size: inherit;
-    padding: .45em .6em;
-    margin: 0.3em 0;
-    border: 1px solid #aaa;
-}
-
-input.inputText {
-    width: 16em;
-}
-
-.button-primary {
-    font-size: 1.2em;
-}
 
 
 /**
