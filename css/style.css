@@ -414,56 +414,8 @@ header > .inner{
 }
 
 
-/* Float-contain */
-
-footer {
-    margin-top: 20px;
-    padding: 1em;
-    background: #003b4c;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-}
-
-footer img {
-    margin-bottom: 1em;
-    max-width: 100%;
-}
-
-footer a,
-footer a:hover,
-footer a:focus {
-    color: #fff;
-}
-
-#tenpoints,
-#fivedemands {
-    padding: 1em 3em;
-}
-
-#wrapper-fazit section,
-#wrapper-zeitplan section {
-    margin: 2em;
-}
-
-#wrapper-fazit {
-    background-color: #8ebe2a
-}
-
-#wrapper-zeitplan {
-    background-color: #013c4e
-}
-
-
-
 .demand_short {
     font-weight: bold;
-}
-
-.sectionimage {
-    text-align: center;
-    padding: 2em 0 0;
-    margin-bottom: 2em;
 }
 
 /**
@@ -640,10 +592,11 @@ footer a:focus {
 .articles .button a{
   display:block;
   font-size:1.6em;
-  line-height:2;
+  line-height:1.8;
   text-decoration:none;
   color:#FFFFFF;
   margin:0 1em;
+  padding-bottom:0.2em;
 }
 .articles .button.subscribe a{
   margin-left:0;
@@ -809,7 +762,7 @@ article .content{
  * 2. subcription form
  */
 aside .widget{
-  border-radius:5px;
+  border-radius:5px 5px 0 0;
   border-top:5px solid #333333;
   box-shadow:0px 0px 0.3em 0.1em #E4E5E6;
   margin:0 0 3em 0;
@@ -894,6 +847,60 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
 .inputSubmit {
     background: linear-gradient(#F7F7F7, #DDD);
 }
+.glossary dt,
+.downloads dt{
+  width:17%;
+}
+.glossary dd,
+.downloads dd{
+  margin-left:20%;
+}
+
+/**
+ * Footer
+ * ======
+ */
+#footer{
+  color:#FFFFFF;
+  background:#003B4C;
+  text-align:center;
+}
+#footer h2,
+#footer a{
+  color:#FFFFFF;
+}
+#footer .wrapper{
+  margin-left:auto;
+  margin-right:auto;
+}
+#footer > .inner{
+  padding-top:1em;
+  padding-bottom:1em;
+}
+#footer .contact{
+  font-size:1.4em;
+}
+#footer > .contact{
+  padding-left:5%;
+  padding-right:5%;
+  background:#FFFFFF;
+  color:#333333;
+  border-top:3px solid #EB4B34;
+}
+#footer > .contact a{
+  color:#337AB7;
+}
+#footer h3{
+  font-size:1.5em;
+}
+#footer .supporter{
+  display:inline-block;
+  margin:1em;
+}
+#footer .supporter img{
+  display:block;
+}
+
 
 
 
@@ -959,6 +966,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
     position:absolute;
     left:-9999em;
   }
+  /*
   #primary .menu{
     position:absolute;
     width:47%;
@@ -966,6 +974,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
     padding-left:3%;
     top:-4.3em;
     border-left:1px solid #EB4B34;
+  }
+  */
+  #primary > .inner{
+  }
+  #primary .menu{
+    position:absolute;
+    width:90%;
+    left:0;
+    top:-4.3em;
+    padding:0 5%;
   }
   #primary li{
     float:left;
@@ -977,6 +995,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
   #primary li.first a{
     margin-left:-1em;
   }
+  .articles{
+    float:left;
+    width:60%;
+  }
+  .articles > .inner{
+    padding:0 2em 0 0;
+  }
   .articles .button a{
     font-size:2em;
     margin:0 1.5em;
@@ -986,6 +1011,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#507884', end
   }
   .articles .button.donate-now a{
     margin-right:1.5em;
+  }
+  main aside{
+    float:right;
+    width:40%;
+  }
+  main aside > .inner{
+    padding:0 0 0 2em;
   }
 }
 
