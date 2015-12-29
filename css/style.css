@@ -133,7 +133,6 @@ header {
   border-bottom:3px solid #EB4B34;
   position: relative;
   z-index:20;
-  padding-bottom:4em;
 }
 header .wrapper{
   margin-left:auto;
@@ -241,7 +240,7 @@ header > .inner{
 #primary.app-menu .toggle{
   position:absolute;
   z-index:25;
-  right:0;
+  left:0;
   top:-3.8em;
   text-indent: -999em;
   height: 2.5em;
