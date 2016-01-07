@@ -942,6 +942,9 @@ a.button,
   }
 }
 @media all and (min-width: 1024px) {
+  #site-header{
+    padding-bottom:4.3em;
+  }
   #site-header .subheadline{
     width:47%;
     padding:0 3% 0 0;
