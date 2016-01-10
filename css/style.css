@@ -25,9 +25,12 @@
 }
 
 body {
-    color: #000000;
-    font-family: fira_sansregular, sans-serif;
-    line-height: 1.4;
+  color: #000000;
+  font-family: fira_sansregular, sans-serif;
+  line-height: 1.4;
+}
+body > .container > .wrapper{
+  max-width:96em;
 }
 h1, h2, h3, h4, h5, h6, th, bold, strong, a:link, a:visited, dt{
   font-family:'fira_sansbold';
@@ -128,12 +131,11 @@ noscript a {
  * ======
  */
 header {
-  background: #003B4C;
-  color: #FFFFFF;
+  background: #E5E5E5;
+  color: #5E5E5E;
   text-align: center;
-  border-bottom:3px solid #EB4B34;
-  position: relative;
-  z-index:20;
+  padding-top:8em;
+  padding:10em 0 15em;
 }
 header .wrapper{
   margin-left:auto;
@@ -152,12 +154,14 @@ header > .inner{
 #site-header h1{
   font-size:3.2em;
   margin-top:0;
-  margin-bottom:0.25em;
+  margin-bottom:0;
+  text-transform:uppercase;
 }
 #site-header h2{
   font-size:2.2em;
-  line-height:1.8;
+  line-height:1.6;
   margin-bottom:0.4em;
+  color:#EB4B34;
 }
 #site-header h2 .urgent{
   display: block;
@@ -168,7 +172,6 @@ header > .inner{
   display:block;
   color:#FFFFFF;
   text-decoration:none;
-  border-bottom:3px solid #EB4B34;
 }
 #site-header a:link,
 #site-header a:visited{
@@ -179,36 +182,18 @@ header > .inner{
   background:#507884;
 }
 #site-header a:active{
-  background:#333333;
+  background:#5E5E5E;
 }
 #site-header h2 a{
   display:inline-block;
   padding:0 0.5em 0.2em 0.5em;
 }
 #site-header .subheadline{
-  background:#333333;
+  background:#5E5E5E;
   font-size:1.2em;
   line-height:2.5;
   margin:0;
   padding:0 3.5em 0 0.5em;
-}
-#site-header #akvorrat {
-  position: absolute;
-  bottom: 1em;
-  right: 0;
-  padding:0.5em;
-  max-width:15%;
-  width:14.4em;
-  border-bottom:3px solid #EB4B34;
-}
-#site-header #akvorrat:link,
-#site-header #akvorrat:visited{
-  background:none;
-}
-#site-header #akvorrat:hover,
-#site-header #akvorrat:focus,
-#site-header #akvorrat:active{
-  background:#333333;
 }
 
 
@@ -227,6 +212,16 @@ header > .inner{
  * 1. primary
  * 2. meta
  */
+#primary{
+  background:#507884;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:#5E5E5E;
+  border:3px solid #EB4B34;
+  border-width:0 0 3px 0;
+}
 #primary .wrapper{
   margin-left:auto;
   margin-right:auto;
@@ -267,16 +262,13 @@ header > .inner{
 #primary.app-menu .toggle.active{ background:#507884; }
 
 #primary .menu{
-  background:#333333;
-  border:3px solid #EB4B34;
-  border-width:0 0 3px 0;
 }
 #primary.app-menu .menu{
   position:absolute;
   right:0;
   left:0;
   /* top is set by JS in px */
-  background:#333333;
+  background:#5E5E5E;
   border-bottom:3px solid #EB4B34;
   z-index:15;
   -webkit-transform:translate3d(0,0,0);
@@ -312,7 +304,6 @@ header > .inner{
 #primary a.active-trail,
 #primary a.active,
 #primary a:active{
-  background:#507884;
 }
 #primary ul ul{
   border: 1px solid #D5D5D5;
@@ -347,19 +338,33 @@ header > .inner{
  * 2. progress bar
  * 3. slider
  */
+.teaser-stage{
+  margin:0 0 4em 0;
+}
 .teaser-stage > .inner{
-  padding:1.5em 0;
+  padding:0 4em 1.5em 4em;
+  border:1px solid #4793B4;
+  background:url(../img/window-title-bar-left.png) 0 0 no-repeat, url(../img/window-title-bar.png) 100% 0 no-repeat; 
+  background-color:#F8F9FA;
+}
+body > .teaser-stage > .inner{
+  margin-top:-12em;
 }
 .teaser-stage .countdown{
-  font-size:2em;
+  font-size:1.6em;
+  line-height:1.875;
+  margin-bottom:3.75em;
   text-align:center;
+  color:#333333;
+}
+#progress{
+  margin:0 0 2em 0;
 }
 .progress-bar {
   position: relative;
   overflow: hidden;
-  border: solid 1px #003b4c;
-  border-radius: 0.3em;
-  margin:0 0 2em 0;
+  border: solid 1px #C4CCC7;
+  background:#E5E5E5;
 }
 .progress-volume {
   height: 100%;
@@ -371,6 +376,27 @@ header > .inner{
   background: -webkit-linear-gradient(top, #b6f235 0%,#8ebf2a 50%,#b6f235 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #b6f235 0%,#8ebf2a 50%,#b6f235 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6f235', endColorstr='#b6f235',GradientType=0 ); /* IE6-9 */
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#56de7c+0,00af3b+50,56de7c+100 */
+  background: #56de7c; /* Old browsers */
+  background: -moz-linear-gradient(top, #56de7c 0%, #00af3b 50%, #56de7c 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #56de7c 0%,#00af3b 50%,#56de7c 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #56de7c 0%,#00af3b 50%,#56de7c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56de7c', endColorstr='#56de7c',GradientType=0 ); /* IE6-9 */
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00af3b+0,00af3b+46,56de7c+69,00af3b+100 */
+  background: #00af3b; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #00af3b 0%, #00af3b 46%, #56de7c 69%, #00af3b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #00af3b 0%,#00af3b 46%,#56de7c 69%,#00af3b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #00af3b 0%,#00af3b 46%,#56de7c 69%,#00af3b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00af3b', endColorstr='#00af3b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00af3b+0,00af3b+6,56de7c+18,00af3b+30,00af3b+52,56de7c+69,00af3b+85,00af3b+100 */
+  background: #00af3b; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #00af3b 0%, #00af3b 6%, #56de7c 18%, #00af3b 30%, #00af3b 52%, #56de7c 69%, #00af3b 85%, #00af3b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #00af3b 0%,#00af3b 6%,#56de7c 18%,#00af3b 30%,#00af3b 52%,#56de7c 69%,#00af3b 85%,#00af3b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #00af3b 0%,#00af3b 6%,#56de7c 18%,#00af3b 30%,#00af3b 52%,#56de7c 69%,#00af3b 85%,#00af3b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00af3b', endColorstr='#00af3b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .ie9 .progress-volume{
   filter:none;
@@ -382,7 +408,7 @@ header > .inner{
   padding: 0.7em;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 1px 1px 1px #FFFFFF;
   font-size: 2em;
 }
 
@@ -420,6 +446,9 @@ header > .inner{
  * Slider
  * ======
  */
+.slider{
+  margin:0 0 4em 0;
+}
 .slideColumn {
   padding: 1.5em;
   display: table-cell;
@@ -542,13 +571,25 @@ header > .inner{
   }
 }
 
+#akvorrat {
+  max-width:15%;
+  width:14.4em;
+  float:left;
+}
+#akvorrat:link,
+#akvorrat:visited{
+}
+#akvorrat:hover,
+#akvorrat:focus,
+#akvorrat:active{
+}
 
 /**
- * Content
+ * Buttons
  * =======
  */
 
-.articles .button{
+.button{
   display:block;
   border:none;
   border-radius:0;
@@ -557,13 +598,18 @@ header > .inner{
   margin:0 0 2em 0;
   padding:0;
 }
-.articles .button.subscribe{
+.button.subscribe{
   float:left;
 }
-.articles .button.donate-now{
+.teaser-stage .subscribe{
+  float:right;
+  margin-top:9em;
+  width:30%;
+}
+.button.donate-now{
   float:right;
 }
-.articles .button a{
+.button a{
   display:block;
   font-size:1.6em;
   line-height:1.8;
@@ -572,7 +618,7 @@ header > .inner{
   margin:0 1em;
   padding-bottom:0.2em;
 }
-.articles .button.subscribe a{
+.button.subscribe a{
   margin-left:0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb4b34+0,af2828+100 */
   background: #eb4b34; /* Old browsers */
@@ -583,10 +629,13 @@ header > .inner{
   background: linear-gradient(to bottom, #eb4b34 0%,#af2828 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb4b34', endColorstr='#af2828',GradientType=0 ); /* IE6-8 */
 }
-.ie9 .articles .button.subscribe a{
+.teaser-stage .subscribe a{
+  margin-right:0;
+}
+.ie9.button.subscribe a{
   filter:none;
 }
-.articles .button.donate-now a{
+.button.donate-now a{
   margin-right:0;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#57b31c+0,368c00+100 */
   background: #57b31c; /* Old browsers */
@@ -597,7 +646,7 @@ header > .inner{
   background: linear-gradient(to bottom, #57b31c 0%,#368c00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57b31c', endColorstr='#368c00',GradientType=0 ); /* IE6-8 */
 }
-.ie9 .articles .button.donate-now a{
+.ie9 .button.donate-now a{
   filter:none;
 }
 .articles article,
@@ -943,7 +992,6 @@ a.button,
 }
 @media all and (min-width: 1024px) {
   #site-header{
-    padding-bottom:4.3em;
   }
   #site-header .subheadline{
     width:47%;
@@ -951,7 +999,6 @@ a.button,
     text-align: right;
   }
   #primary{
-    position:relative;
     z-index:25;
   }
   #primary h3{
@@ -971,15 +1018,13 @@ a.button,
   #primary > .inner{
   }
   #primary .menu{
-    position:absolute;
-    width:90%;
-    left:0;
-    top:-4.3em;
-    padding:0 5%;
   }
   #primary li{
     float:left;
     position:relative;
+  }
+  #primary li.last{
+    float:right;
   }
   #primary .menu a{
     padding:0 1em;
